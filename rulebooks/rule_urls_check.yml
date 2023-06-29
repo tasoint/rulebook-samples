@@ -6,7 +6,7 @@
     - name: check web site
       ansible.eda.url_check:
         urls:
-          - http://abehiroshi.la.coocan.jp
+          - https://www.wikipedia.org
         delay: 60
 
   rules:
