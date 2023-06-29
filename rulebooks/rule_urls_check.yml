@@ -1,0 +1,25 @@
+---
+- name: Hello Events
+  hosts: all
+
+  sources:
+    - name: check web server
+      ansible.eda.url_check:
+        urls:
+          - http://abehiroshi.la.coocan.jp/
+        delay: 60
+
+  rules:
+    - name: play JT
+      condition:
+      action: event.url_check.status == "up"
+        run_job_template:
+          name: Demo Job Template
+          organization: Default 
+    
+    - name: debug
+      condition:
+      action: event.url_check.status == "up"
+        run_module:
+          debug:
+            msg: "{{ event }}"
