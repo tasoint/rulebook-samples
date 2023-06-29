@@ -12,7 +12,7 @@
   rules:
     - name: play JT and debug
       condition: event.url_check.status == "up"
-      action:
+      actions:
         - run_job_template:
             name: Demo Job Template
             organization: Default 
