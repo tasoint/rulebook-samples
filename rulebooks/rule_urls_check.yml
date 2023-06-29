@@ -18,3 +18,6 @@
             organization: Default 
         - debug:
             msg: "{{ event }}"
+
+## memo
+### {'url_check': {'status_code': 200, 'url': 'http://abehiroshi.la.coocan.jp', 'status': 'up'}, 'meta': {'received_at': '2023-06-29T16:57:15.960849Z', 'source': {'name': 'check web site', 'type': 'ansible.eda.url_check'}, 'uuid': 'c9ce8474-e1a7-47f8-a227-13ae6bfe9b7e'}}
