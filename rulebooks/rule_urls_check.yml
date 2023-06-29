@@ -20,6 +20,5 @@
     - name: debug
       condition: event.url_check.status == "up"
       action:
-        run_module:
-          debug:
-            msg: "{{ event }}"
+        debug:
+          msg: "{{ event }}"
