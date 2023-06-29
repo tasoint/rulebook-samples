@@ -8,7 +8,7 @@
         delay: 30
 
   rules:
-    - name debug
+    - name: debug
       condition: event.i > 1
       acitons:
         - debug:
