@@ -9,7 +9,7 @@
 
   rules:
     - name debug
-      condition: true
+      condition: event.i > 1
       acitons:
         - debug:
             msg: "{{ event }}"
