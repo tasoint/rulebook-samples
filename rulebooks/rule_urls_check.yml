@@ -6,19 +6,15 @@
     - name: check web site
       ansible.eda.url_check:
         urls:
-          - https://www.wikipedia.org
+          - http://abehiroshi.la.coocan.jp
         delay: 60
 
   rules:
-    - name: play JT
+    - name: play JT and debug
       condition: event.url_check.status == "up"
       action:
-        run_job_template:
-          name: Demo Job Template
-          organization: Default 
-    
-    - name: debug
-      condition: event.url_check.status == "up"
-      action:
-        debug:
-          msg: "{{ event }}"
+        - run_job_template:
+            name: Demo Job Template
+            organization: Default 
+        - debug:
+            msg: "{{ event }}"
