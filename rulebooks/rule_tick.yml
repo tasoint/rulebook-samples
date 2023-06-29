@@ -1,0 +1,15 @@
+---
+- name: tick
+  hosts: all
+
+  sources:
+    - name: test tick
+      ansible.eda.tick:
+        delay: 30
+
+  rules:
+    - name debug
+      condition: true
+      acitons:
+        - debug:
+            msg: "{{ event }}"
