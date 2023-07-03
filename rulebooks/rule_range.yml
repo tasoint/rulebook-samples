@@ -12,3 +12,10 @@
       action:
         debug:
           msg: "{{ event }}"
+
+    - name: shutdown events
+      condition: event.i >=3
+      action:
+        shutdown:
+        delay: 0.125
+        message: Shutting down after 5 events
